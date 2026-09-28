@@ -1,0 +1,1423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PinkLoop | Handmade Crochet</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            color: #30272a;
+            background: white;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            width: 100%;
+            display: block;
+        }
+
+        button {
+            font-family: inherit;
+            cursor: pointer;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+
+        /* ================= NAVBAR ================= */
+
+        header {
+            height: 80px;
+            border-bottom: 1px solid #f0e4e8;
+            background: white;
+            display: flex;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: "Playfair Display", serif;
+            font-size: 25px;
+            font-weight: 700;
+        }
+
+        .logo span {
+            color: #df7197;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 35px;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            font-weight: 600;
+            color: #554c50;
+        }
+
+        .nav-links a:hover {
+            color: #df7197;
+        }
+
+        .nav-icons {
+            display: flex;
+            gap: 18px;
+        }
+
+        .nav-icons i {
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .nav-icons i:hover {
+            color: #df7197;
+        }
+
+
+        /* ================= HERO ================= */
+
+        .hero {
+            background: linear-gradient(
+                120deg,
+                #ffffff,
+                #fff5f8
+            );
+
+            min-height: 650px;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 70px;
+        }
+
+        .small-title {
+            color: #df7197;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 18px;
+        }
+
+        .hero h1 {
+            font-family: "Playfair Display", serif;
+            font-size: 70px;
+            line-height: 1.1;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: #df7197;
+            font-style: italic;
+        }
+
+        .hero p {
+            color: #766c70;
+            max-width: 500px;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 14px 25px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 700;
+            display: inline-block;
+        }
+
+        .pink-btn {
+            background: #df7197;
+            color: white;
+        }
+
+        .pink-btn:hover {
+            background: #c95e82;
+        }
+
+        .white-btn {
+            border: 1px solid #ddd0d5;
+            background: white;
+        }
+
+        .white-btn:hover {
+            border-color: #df7197;
+            color: #df7197;
+        }
+
+
+        /* HERO IMAGE */
+
+        .hero-image {
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero-image::before {
+            content: "";
+            position: absolute;
+            width: 430px;
+            height: 430px;
+            background: #ffe4ed;
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        .hero-image img {
+            width: 390px;
+            height: 480px;
+            object-fit: cover;
+            border-radius: 200px 200px 25px 25px;
+            position: relative;
+            z-index: 1;
+            box-shadow: 0 20px 50px rgba(80, 40, 50, 0.15);
+        }
+
+        .floating-card {
+            position: absolute;
+            z-index: 2;
+            background: white;
+            padding: 13px 18px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            font-size: 12px;
+        }
+
+        .card-one {
+            top: 60px;
+            left: 10px;
+        }
+
+        .card-two {
+            bottom: 40px;
+            right: 10px;
+        }
+
+
+        /* ================= CATEGORIES ================= */
+
+        .categories {
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .section-title {
+            font-family: "Playfair Display", serif;
+            font-size: 45px;
+            margin-bottom: 12px;
+        }
+
+        .section-title span {
+            color: #df7197;
+            font-style: italic;
+        }
+
+        .section-description {
+            color: #766c70;
+            max-width: 550px;
+            margin: auto;
+        }
+
+        .category-grid {
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .category {
+            border: 1px solid #eee3e7;
+            border-radius: 18px;
+            padding: 35px 20px;
+            transition: 0.3s;
+        }
+
+        .category:hover {
+            transform: translateY(-7px);
+            border-color: #edb3c5;
+            box-shadow: 0 15px 30px rgba(120,60,80,0.08);
+        }
+
+        .category-icon {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .category h3 {
+            font-family: "Playfair Display", serif;
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+
+        .category p {
+            color: #8a7f83;
+            font-size: 12px;
+        }
+
+
+        /* ================= PRODUCTS ================= */
+
+        .products {
+            background: #fff8fa;
+            padding: 100px 0;
+        }
+
+        .products-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            margin-bottom: 45px;
+        }
+
+        .products-header h2 {
+            font-family: "Playfair Display", serif;
+            font-size: 45px;
+        }
+
+        .products-header h2 span {
+            color: #df7197;
+            font-style: italic;
+        }
+
+        .view-all {
+            color: #df7197;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 22px;
+        }
+
+        .product {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .product-image {
+            height: 300px;
+            position: relative;
+            overflow: hidden;
+            background: #f8edf1;
+        }
+
+        .product-image img {
+            height: 100%;
+            object-fit: cover;
+            transition: 0.4s;
+        }
+
+        .product:hover img {
+            transform: scale(1.05);
+        }
+
+        .heart {
+            position: absolute;
+            right: 12px;
+            top: 12px;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            border: none;
+            background: white;
+            z-index: 2;
+        }
+
+        .heart:hover {
+            color: #df7197;
+        }
+
+        .tag {
+            position: absolute;
+            top: 13px;
+            left: 13px;
+            background: #df7197;
+            color: white;
+            padding: 6px 11px;
+            border-radius: 20px;
+            font-size: 10px;
+            font-weight: bold;
+            z-index: 2;
+        }
+
+        .product-info {
+            padding: 18px;
+        }
+
+        .product-category {
+            color: #df7197;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 9px;
+            font-weight: bold;
+        }
+
+        .product h3 {
+            font-family: "Playfair Display", serif;
+            font-size: 19px;
+            margin: 6px 0 12px;
+        }
+
+        .product-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .price {
+            font-weight: 700;
+        }
+
+        .rating {
+            font-size: 11px;
+            color: #777;
+        }
+
+        .rating i {
+            color: #efb44d;
+        }
+
+
+        /* ================= ABOUT ================= */
+
+        .about {
+            padding: 120px 0;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 90px;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image img {
+            height: 480px;
+            object-fit: cover;
+            border-radius: 25px;
+        }
+
+        .about-text h2 {
+            font-family: "Playfair Display", serif;
+            font-size: 50px;
+            margin-bottom: 25px;
+        }
+
+        .about-text h2 span {
+            color: #df7197;
+            font-style: italic;
+        }
+
+        .about-text p {
+            color: #766c70;
+            line-height: 1.8;
+            margin-bottom: 18px;
+        }
+
+        .features {
+            margin: 30px 0;
+        }
+
+        .feature {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 18px;
+        }
+
+        .feature-icon {
+            width: 40px;
+            height: 40px;
+            background: #fff0f5;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            color: #df7197;
+        }
+
+        .feature strong {
+            font-size: 13px;
+        }
+
+        .feature p {
+            font-size: 11px;
+            margin: 0;
+        }
+
+
+        /* ================= GALLERY ================= */
+
+        .gallery {
+            padding: 100px 0;
+            background: #fff8fa;
+        }
+
+        .gallery-grid {
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: 200px;
+            gap: 15px;
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 15px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.4s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-item.large {
+            grid-row: span 2;
+        }
+
+        .gallery-item.wide {
+            grid-column: span 2;
+        }
+
+
+        /* ================= NEWSLETTER ================= */
+
+        .newsletter {
+            padding: 80px 0;
+        }
+
+        .newsletter-box {
+            background: #fff0f5;
+            border-radius: 25px;
+            padding: 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .newsletter h2 {
+            font-family: "Playfair Display", serif;
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        .newsletter p {
+            color: #766c70;
+            font-size: 14px;
+        }
+
+        .email-box {
+            display: flex;
+            background: white;
+            padding: 5px;
+            border-radius: 30px;
+            min-width: 400px;
+        }
+
+        .email-box input {
+            border: none;
+            outline: none;
+            padding: 12px 18px;
+            flex: 1;
+        }
+
+        .email-box button {
+            border: none;
+            background: #df7197;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background: #30272a;
+            color: white;
+            padding-top: 70px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 50px;
+            padding-bottom: 60px;
+        }
+
+        .footer-logo {
+            font-family: "Playfair Display", serif;
+            font-size: 25px;
+            margin-bottom: 15px;
+        }
+
+        .footer-logo span {
+            color: #df7197;
+        }
+
+        .footer-brand p {
+            color: #b8afb2;
+            font-size: 13px;
+            max-width: 300px;
+        }
+
+        .footer-column h4 {
+            margin-bottom: 18px;
+        }
+
+        .footer-column a {
+            display: block;
+            color: #b8afb2;
+            font-size: 13px;
+            margin-bottom: 10px;
+        }
+
+        .footer-column a:hover {
+            color: #df7197;
+        }
+
+        .social {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .social a {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background: #443a3e;
+            display: grid;
+            place-items: center;
+        }
+
+        .social a:hover {
+            background: #df7197;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #443a3e;
+            padding: 20px 0;
+            color: #9d9497;
+            font-size: 11px;
+            text-align: center;
+        }
+
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 900px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero-content,
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding: 70px 0;
+            }
+
+            .hero h1 {
+                font-size: 55px;
+            }
+
+            .hero-image {
+                margin-top: 20px;
+            }
+
+            .category-grid,
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .newsletter-box {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .email-box {
+                width: 100%;
+                min-width: auto;
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .hero h1 {
+                font-size: 45px;
+            }
+
+            .hero-image img {
+                width: 300px;
+                height: 380px;
+            }
+
+            .hero-image::before {
+                width: 320px;
+                height: 320px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .category-grid,
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .product-image {
+                height: 350px;
+            }
+
+            .section-title,
+            .products-header h2,
+            .about-text h2 {
+                font-size: 38px;
+            }
+
+            .products-header {
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .gallery-item.wide {
+                grid-column: span 2;
+            }
+
+            .newsletter-box {
+                padding: 35px 25px;
+            }
+
+            .email-box {
+                flex-direction: column;
+                background: transparent;
+                gap: 10px;
+            }
+
+            .email-box input {
+                border-radius: 25px;
+                height: 48px;
+            }
+
+            .email-box button {
+                height: 48px;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header>
+
+        <div class="container navbar">
+
+            <a href="#" class="logo">
+                🧶 Pink<span>Loop</span>
+            </a>
+
+            <nav class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#shop">Shop</a>
+                <a href="#about">About</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <div class="nav-icons">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-regular fa-heart"></i>
+                <i class="fa-solid fa-bag-shopping"></i>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero" id="home">
+
+        <div class="container hero-content">
+
+            <div>
+
+                <div class="small-title">
+                    Handmade with love
+                </div>
+
+                <h1>
+                    Little things,<br>
+                    <span>made with love.</span>
+                </h1>
+
+                <p>
+                    Discover beautiful handmade crochet pieces,
+                    carefully crafted stitch by stitch to add
+                    a little warmth and charm to your everyday life.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#shop" class="btn pink-btn">
+                        Explore Collection
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                    <a href="#about" class="btn white-btn">
+                        Our Story
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-image">
+
+                <div class="floating-card card-one">
+                    💗 Made with love
+                </div>
+
+                <img
+                    src="https://images.unsplash.com/photo-1604881991720-f91add269bed?auto=format&fit=crop&w=900&q=85"
+                    alt="Crochet handmade product"
+                >
+
+                <div class="floating-card card-two">
+                    🧶 100% Handmade
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CATEGORIES ================= -->
+
+    <section class="categories">
+
+        <div class="container">
+
+            <p class="small-title">Explore</p>
+
+            <h2 class="section-title">
+                Find something <span>special</span>
+            </h2>
+
+            <p class="section-description">
+                From cute little accessories to cozy handmade pieces,
+                find something made especially for you.
+            </p>
+
+
+            <div class="category-grid">
+
+                <div class="category">
+                    <div class="category-icon">👜</div>
+                    <h3>Bags</h3>
+                    <p>12 items</p>
+                </div>
+
+                <div class="category">
+                    <div class="category-icon">🌸</div>
+                    <h3>Flowers</h3>
+                    <p>18 items</p>
+                </div>
+
+                <div class="category">
+                    <div class="category-icon">🧸</div>
+                    <h3>Amigurumi</h3>
+                    <p>15 items</p>
+                </div>
+
+                <div class="category">
+                    <div class="category-icon">🎀</div>
+                    <h3>Accessories</h3>
+                    <p>20 items</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PRODUCTS ================= -->
+
+    <section class="products" id="shop">
+
+        <div class="container">
+
+            <div class="products-header">
+
+                <div>
+                    <p class="small-title">Our collection</p>
+
+                    <h2>
+                        Made for <span>you.</span>
+                    </h2>
+                </div>
+
+                <a href="#" class="view-all">
+                    View all →
+                </a>
+
+            </div>
+
+
+            <div class="product-grid">
+
+
+                <!-- PRODUCT 1 -->
+
+                <div class="product">
+
+                    <div class="product-image">
+
+                        <span class="tag">Bestseller</span>
+
+                        <button class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                        <img
+                            src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=700&q=85"
+                            alt="Crochet bag"
+                        >
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <div class="product-category">
+                            Bags
+                        </div>
+
+                        <h3>Blush Crochet Bag</h3>
+
+                        <div class="product-bottom">
+
+                            <span class="price">
+                                ₹1,499
+                            </span>
+
+                            <span class="rating">
+                                <i class="fa-solid fa-star"></i>
+                                4.9
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUCT 2 -->
+
+                <div class="product">
+
+                    <div class="product-image">
+
+                        <button class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                        <img
+                            src="https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&w=700&q=85"
+                            alt="Crochet flowers"
+                        >
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <div class="product-category">
+                            Flowers
+                        </div>
+
+                        <h3>Forever Flower Bouquet</h3>
+
+                        <div class="product-bottom">
+
+                            <span class="price">
+                                ₹899
+                            </span>
+
+                            <span class="rating">
+                                <i class="fa-solid fa-star"></i>
+                                4.8
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUCT 3 -->
+
+                <div class="product">
+
+                    <div class="product-image">
+
+                        <span class="tag">
+                            New
+                        </span>
+
+                        <button class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                        <img
+                            src="https://images.unsplash.com/photo-1559454403-b8fb88521f11?auto=format&fit=crop&w=700&q=85"
+                            alt="Crochet teddy bear"
+                        >
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <div class="product-category">
+                            Amigurumi
+                        </div>
+
+                        <h3>Little Pink Bear</h3>
+
+                        <div class="product-bottom">
+
+                            <span class="price">
+                                ₹699
+                            </span>
+
+                            <span class="rating">
+                                <i class="fa-solid fa-star"></i>
+                                5.0
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUCT 4 -->
+
+                <div class="product">
+
+                    <div class="product-image">
+
+                        <button class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                        <img
+                            src="https://images.unsplash.com/photo-1594223274512-ad4803739b7c?auto=format&fit=crop&w=700&q=85"
+                            alt="Crochet accessory"
+                        >
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <div class="product-category">
+                            Accessories
+                        </div>
+
+                        <h3>Soft Pink Hair Bow</h3>
+
+                        <div class="product-bottom">
+
+                            <span class="price">
+                                ₹399
+                            </span>
+
+                            <span class="rating">
+                                <i class="fa-solid fa-star"></i>
+                                4.9
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section class="about" id="about">
+
+        <div class="container about-content">
+
+            <div class="about-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=900&q=85"
+                    alt="Handmade crochet workspace"
+                >
+
+            </div>
+
+
+            <div class="about-text">
+
+                <p class="small-title">
+                    Our story
+                </p>
+
+                <h2>
+                    Handmade isn't just
+                    <span>what we do.</span>
+                </h2>
+
+                <p>
+                    PinkLoop started with a simple love for yarn,
+                    colors and creating little things that make
+                    people smile.
+                </p>
+
+                <p>
+                    Every piece is carefully crocheted by hand,
+                    making each creation slightly different and
+                    completely yours.
+                </p>
+
+
+                <div class="features">
+
+                    <div class="feature">
+
+                        <div class="feature-icon">
+                            ♡
+                        </div>
+
+                        <div>
+                            <strong>Made by hand</strong>
+                            <p>Every stitch is made with care.</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="feature">
+
+                        <div class="feature-icon">
+                            ✦
+                        </div>
+
+                        <div>
+                            <strong>Made to last</strong>
+                            <p>Quality yarn and thoughtful designs.</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <a href="#" class="btn pink-btn">
+                    Read Our Story →
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= GALLERY ================= -->
+
+    <section class="gallery" id="gallery">
+
+        <div class="container">
+
+            <div style="text-align:center;">
+
+                <p class="small-title">
+                    A little inspiration
+                </p>
+
+                <h2 class="section-title">
+                    Made with <span>love.</span>
+                </h2>
+
+                <p class="section-description">
+                    A glimpse into our world of yarn,
+                    colors and creativity.
+                </p>
+
+            </div>
+
+
+            <div class="gallery-grid">
+
+                <div class="gallery-item large">
+                    <img
+                        src="https://images.unsplash.com/photo-1602523961358-f9f03dd557db?auto=format&fit=crop&w=700&q=85"
+                        alt="Crochet work"
+                    >
+                </div>
+
+                <div class="gallery-item">
+                    <img
+                        src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?auto=format&fit=crop&w=700&q=85"
+                        alt="Yarn"
+                    >
+                </div>
+
+                <div class="gallery-item">
+                    <img
+                        src="https://images.unsplash.com/photo-1604881991720-f91add269bed?auto=format&fit=crop&w=700&q=85"
+                        alt="Crochet"
+                    >
+                </div>
+
+                <div class="gallery-item wide">
+                    <img
+                        src="https://images.unsplash.com/photo-1610701596007-11502861dcfa?auto=format&fit=crop&w=900&q=85"
+                        alt="Handmade products"
+                    >
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= NEWSLETTER ================= -->
+
+    <section class="newsletter">
+
+        <div class="container">
+
+            <div class="newsletter-box">
+
+                <div>
+
+                    <p class="small-title">
+                        Stay connected
+                    </p>
+
+                    <h2>
+                        Stay in the loop 💌
+                    </h2>
+
+                    <p>
+                        Get first access to new collections,
+                        handmade drops and little surprises.
+                    </p>
+
+                </div>
+
+
+                <div class="email-box">
+
+                    <input
+                        type="email"
+                        placeholder="Enter your email address"
+                    >
+
+                    <button>
+                        Subscribe
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer id="contact">
+
+        <div class="container footer-content">
+
+            <div class="footer-brand">
+
+                <div class="footer-logo">
+                    🧶 Pink<span>Loop</span>
+                </div>
+
+                <p>
+                    Handmade crochet pieces,
+                    made with patience and love.
+                </p>
+
+                <div class="social">
+
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-pinterest-p"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Shop</h4>
+
+                <a href="#">All Products</a>
+                <a href="#">Bags</a>
+                <a href="#">Flowers</a>
+                <a href="#">Amigurumi</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Help</h4>
+
+                <a href="#">Contact Us</a>
+                <a href="#">Shipping</a>
+                <a href="#">Returns</a>
+                <a href="#">FAQ</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Follow</h4>
+
+                <a href="#">Instagram</a>
+                <a href="#">Pinterest</a>
+                <a href="#">Facebook</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            © 2026 PinkLoop · Made with 🩷 & yarn.
+
+        </div>
+
+    </footer>
+
+</body>
+</html>
